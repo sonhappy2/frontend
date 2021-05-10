@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr,td,table{
+            border:1px black solid;
+            border-collapse: collapse;
+            text-align: right;
+        }
+        tr:nth-child(even){
+            background-color: red;
+        }
+        td{
+            width: 30px;
+        }
+    </style>
+    <script>
+        function gugudan(){
+         var table = "<table border ='1'>";
+           
+           for(var i=2; i<10;i++){
+               table += "<tr>";
+                
+                table += "<td>"+i+"단</td>";
+               
+                
+                for(var j=1;j<10;j++){
+                    table += "<td>"+ i*j+"</td>"
+                }
+               
+                table +="</tr>"
+           }
+        
+           
+          table += "</table>";
+         document.getElementById('result').innerHTML = table;
+        }
+    </script>
+</head>
+<body>
+    <button onclick="gugudan()">구구단출력</button>
+    <div id="result">
+    </div>
+    
+    
+</body>
+</html>
