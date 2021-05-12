@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- js파일 import-->
+    <script src="../js/joinformcopy.js"></script>
+    <!-- css 파일 import-->
+    <link rel="stylesheet" href="../css/joinform.css">
+</head>
+<body>
+    아이디 : <input type="text" id="id1" onblur="mid()"> <span id="result"></span> <br>
+    비밀번호 : <input type="text" id="pwd" onblur="mpassword()"> <span id="result1"></span><br>
+    비밀번호 확인 : <input type="text" id="pwdconfirm" onblur="passwordconfirm()" ><span id ="result2"></span><br>
+    이름 : <input type="text" id="name1" onblur="mname()"><span id="result3"></span><br>
+    이메일 : <input type="text" name="emailid"> @ <input type="text" id="domain1"> 
+            <select id="domain2" onchange="memail()">
+                <option value="">직접입력</option>
+               <option value="naver.com">네이버</option>
+               <option value="daum.net">다음</option>
+               <option value="gmail.com">지메일</option>  </select> <br>
+    전화번호 : <input type="text" id="phone" onblur="mphone()"> <span id="result4"></span><br>
+    집주소 : <br><input type="text" id="sample6_postcode" placeholder="우편번호">
+             <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
+             <input type="text" id="sample6_address" placeholder="주소"><br>
+             <input type="text" id="sample6_detailAddress" placeholder="상세주소">
+             <input type="text" id="sample6_extraAddress" placeholder="참고항목">
+
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+    
+</body>
+</html>
